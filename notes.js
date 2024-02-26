@@ -107,7 +107,7 @@ function formAdd() {
 
     const id = Date.now().toString();
 
-    listNotes.appendChild(createNotes(title.value, isi.value, formatTgl, id));
+    listNotes.prepend(createNotes(title.value, isi.value, formatTgl, id));
 
     data.push({
       id: id,
