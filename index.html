@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/assets/favicon.ico" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Notes App</title>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              color1: "#FF8080",
+              color2: "#FFCF96",
+              color3: "#F6FDC3",
+              color4: "#CDFAD5",
+              color2Hover: "#ffc596",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .waves-svg {
+        width: calc(179% + 1.3px);
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="flex justify-between p-4 bg-color1">
+      <section class="flex items-center">
+        <img src="/assets/icon-logo.png" alt="notes-app" class="w-10" />
+        <h1 class="font-bold text-xl text-white">Notes App</h1>
+      </section>
+      <a
+        href="/notes.html"
+        class="py-1 px-4 font-bold rounded-md text-sm border-2 leading-7 border-white hover:border-color2 text-white"
+      >
+        Ayo mulai
+      </a>
+    </nav>
+
+    <header
+      class="bg-color1 relative h-[65vh] flex flex-col justify-center items-center"
+    >
+      <section class="px-4 mx-auto max-w-screen-xl text-center -mt-10">
+        <h1
+          class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-white"
+        >
+          Tangkap idemu dan Catat semuanya
+        </h1>
+        <p
+          class="mb-8 text-lg font-normal text-gray-200 lg:text-xl sm:px-16 lg:px-40"
+        >
+          Biarkan kreativitasmu mengalir. Mulai menulis di app catatan yang
+          simpel dan elegan ini.
+        </p>
+        <a
+          href="/notes.html"
+          class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center rounded-lg bg-color2 text-black hover:bg-color2Hover"
+        >
+          Ayo mulai
+          <svg
+            class="w-3.5 h-3.5 ms-2 rtl:rotate-180"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 14 10"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M1 5h12m0 0L9 1m4 4L9 9"
+            />
+          </svg>
+        </a>
+      </section>
+      <section
+        class="absolute bottom-0 left-0 w-full overflow-hidden leading-none rotate-180"
+      >
+        <svg
+          data-name="Layer 1"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1200 120"
+          preserveAspectRatio="none"
+          class="waves-svg relative block h-[96px]"
+          fill="#ffffff"
+        >
+          <path
+            d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+            class="fill-[#ffffff]"
+          ></path>
+        </svg>
+      </section>
+    </header>
+    <main>
+      <section class="">
+        <section class="w-fit m-auto">
+          <h2 class="text-center font-semibold text-2xl">Tentang</h2>
+          <hr class="mt-1 h-[2px] rounded-sm border-none bg-color2" />
+        </section>
+        <p class="max-w-[45rem] text-center m-auto mt-5 text-gray-600">
+          Di dunia yang serba cepat ini, mudah sekali untuk dibanjiri oleh
+          informasi dan ide. Di sinilah Notes App berperan. Lebih dari sekadar
+          catatan biasa, aplikasi ini dirancang untuk menjadi pusat kreativitas,
+          pengingat, dan organisasi Anda
+        </p>
+      </section>
+
+      <section class="py-10 mt-32">
+        <section class="w-fit m-auto">
+          <h2 class="text-center font-semibold text-2xl">
+            Layanan Yang Kami Sediakan
+          </h2>
+          <hr class="mt-1 h-[1.5px] rounded-sm border-none bg-color2" />
+        </section>
+
+        <section class="px-20 flex flex-wrap justify-around mt-12">
+          <section
+            class="rounded-md overflow-hidden w-52 hover:scale-105 transition-all"
+          >
+            <img src="/assets/create.jpg" alt="" class="w-full" />
+            <section>
+              <p class="text-center mt-2 font-semibold">Buat Catatan</p>
+              <p class="text-sm text-gray-500 text-center">
+                Anda dapat menulis catatan dengan mudah dan cepat
+              </p>
+            </section>
+          </section>
+          <section
+            class="rounded-md overflow-hidden w-52 hover:scale-105 transition-all"
+          >
+            <img src="/assets/save.jpg" alt="" class="w-full" />
+            <section>
+              <p class="text-center mt-2 font-semibold">Simpan Catatan</p>
+              <p class="text-sm text-gray-500 text-center">
+                Anda dapat menyimpan catatan yang sudah anda buat
+              </p>
+            </section>
+          </section>
+          <section
+            class="rounded-md overflow-hidden w-52 hover:scale-105 transition-all"
+          >
+            <img src="/assets/delete.jpg" alt="" class="w-full" />
+            <section>
+              <p class="text-center mt-2 font-semibold">Hapus Catatan</p>
+              <p class="text-sm text-gray-500 text-center">
+                Anda dapat menghapus catatan yang tidak dibutuhkan
+              </p>
+            </section>
+          </section>
+        </section>
+      </section>
+    </main>
+    <footer
+      class="py-10 px-20 bg-color1 mt-32 text-white flex flex-wrap justify-between"
+    >
+      <section class="w-fit">
+        <section class="flex items-center">
+          <img src="/assets/icon-logo.png" alt="notes-app" class="w-10" />
+          <h1 class="font-bold text-xl text-white">Notes App</h1>
+        </section>
+        <p class="max-w-52 text-sm">
+          Tangkap ide-ide brilian sebelum hilang dengan catatan teks cepat
+        </p>
+      </section>
+      <section>
+        <p class="text-lg font-semibold">Kontak Kami</p>
+        <section class="flex flex-wrap justify-between mt-4">
+          <a href="https://www.instagram.com/mzdn404/" class="cursor-pointer"
+            ><img src="/assets/ig.png" alt="instagram" class="w-10"
+          /></a>
+          <a href="https://wa.me/6282247739704" class="cursor-pointer"
+            ><img src="/assets/wa.png" alt="instagram" class="w-10"
+          /></a>
+        </section>
+      </section>
+    </footer>
+  </body>
+</html>

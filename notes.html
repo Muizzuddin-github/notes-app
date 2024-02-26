@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/assets/favicon.ico" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="/notes.js" async></script>
+    <title>Notes App</title>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              color1: "#FF8080",
+              color2: "#FFCF96",
+              color3: "#F6FDC3",
+              color4: "#CDFAD5",
+              color2Hover: "#ffc596",
+            },
+          },
+        },
+      };
+    </script>
+
+    <style>
+      .hide-scroll::-webkit-scrollbar {
+        display: none;
+      }
+
+      .hide-scroll {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="flex flex-wrap">
+      <aside class="pt-10 px-10 w-[10wv] h-[100vh]">
+        <a href="/index.html" class="cursor-pointer">
+          <section class="flex items-center">
+            <img src="/assets/icon-logo.png" alt="notes-app" class="w-10" />
+            <h1 class="font-bold text-xl">Notes App</h1>
+          </section>
+        </a>
+
+        <section class="mt-5">
+          <section class="flex flex-col justify-between gap-5">
+            <section class="btn-tambah flex items-center gap-2 cursor-pointer">
+              <i class="fa-solid fa-plus"></i>
+              <p>Tambah</p>
+            </section>
+          </section>
+        </section>
+      </aside>
+
+      <section class="pt-10 pl-24 w-[40vw] ">
+        <h1 class="notes-info mt-10 text-xl font-bold ml-5">Catatan Anda</h1>
+
+        <section
+          class="list-notes flex flex-col mt-5 gap-4 overflow-y-scroll w-full hide-scroll h-[80vh]"
+        ></section>
+      </section>
+
+      <section class="w-[42rem]  py-10 px-10">
+        <img
+          src="/assets/woman-computer.jpg"
+          alt="woman-computer"
+          class="w-80 m-auto h-[22rem] block"
+        />
+          <p class="info-form font-semibold">Tulis catatan anda</p>
+          <form class="form-add mt-5">
+            <section class="flex gap-2">
+              <label for="title" class="text-sm">Judul</label>
+              <input
+                type="text"
+                id="title"
+                class="border outline-none rounded-sm text-sm p-1"
+              />
+            </section>
+
+            <section class="flex gap-7 mt-2">
+              <label for="notes" class="text-sm">Isi</label>
+              <textarea
+                id="notes"
+                cols="50"
+                rows="4"
+                class="border outline-none p-1 text-sm"
+              ></textarea>
+            </section>
+            <button
+              class="py-1 px-4 text-sm bg-color2 mt-5 rounded-sm hover:bg-color2Hover"
+            >
+              Tambah
+            </button>
+          </form>
+
+          <form class="form-edit mt-5 hidden">
+            <section class="flex gap-2">
+              <label for="title" class="text-sm">Judul</label>
+              <input
+                type="text"
+                id="title"
+                class="border outline-none rounded-sm text-sm p-1"
+              />
+            </section>
+
+            <section class="flex gap-7 mt-2">
+              <label for="notes" class="text-sm">Isi</label>
+              <textarea
+                id="notes"
+                cols="50"
+                rows="4"
+                class="border outline-none p-1 text-sm"
+              ></textarea>
+            </section>
+            <button
+              class="py-1 px-4 text-sm bg-color2 mt-5 rounded-sm hover:bg-color2Hover"
+            >
+              edit
+            </button>
+          </form>
+        </section>
+      </section>
+    </main>
+  </body>
+</html>
