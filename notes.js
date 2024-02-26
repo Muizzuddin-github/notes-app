@@ -189,6 +189,7 @@ main();
 
 window.addEventListener("click", function (e) {
   const listNotes = document.querySelector(".list-notes");
+  const notesInfo = this.document.querySelector(".notes-info");
 
   if (e.target.classList.contains("trash-btn")) {
     const id = e.target.parentElement.dataset.id;
@@ -200,6 +201,10 @@ window.addEventListener("click", function (e) {
       if (idItem === id) {
         listNotes.removeChild(listNotes.children[i]);
       }
+    }
+
+    if (data.length === 0) {
+      notesInfo.textContent = "Catatan Anda Kosong";
     }
 
     this.localStorage.setItem("data", JSON.stringify(data));
